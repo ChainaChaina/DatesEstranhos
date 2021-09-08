@@ -1,0 +1,16 @@
+<body class="body flex column">
+    <div class="container flex column">
+        <h1 class="title">Dates</h1>    
+        <div class="date">
+            <p *ngIf="!date " class="sub">Click no botão para ver uma ideia de date</p>
+            <p *ngIf="date  && !gameOver" class="sub">{{date}}</p>
+            <p *ngIf="gameOver" class="sub">ACABOU, TU ZEROU OS DATES <br><br><i class="fab fa-twitter-square"></i> @Chaina_txt<br><i class="fab fa-instagram"></i> @Chaina.jpg <br><br>me manda mais ideias! </p>
+
+        </div>
+        <div class="author">
+            <p *ngIf="author"><i class="fab fa-instagram"></i>  {{author}}</p>
+        </div>
+        <button *ngIf="!gameOver "  (click)="handlerClick()" class="btnIndex"> <3 </button>
+    </div>
+    
+</body>
